@@ -3,7 +3,7 @@ a.button
   position: relative
   color: white
 
-  &:after, &:visited:after, &:active:after
+  &:after, &:active:after
     content: ''
     height: 3px
     position: absolute
@@ -14,10 +14,10 @@ a.button
     background: white
     transition: 0.2s
   
-  &:hover:after, &:visited:hover:after
+  &:hover:after,
     width: 50%
   &:active:after
-    width: 100%
+    width: 110%
 
 
   &__type2
@@ -28,23 +28,24 @@ a.button
     border-radius: .4em
     padding: .55em 2.3em .55em 2.05em
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s
+    
     &:hover
       color: #000 !important
-      background-color: transparent
+      background-color: white
       left: 0%
       right: auto
       width: 100%     
-      &:before
-        left: 0%
-        right: auto
-        width: 100%
-        position: absolute
-        top: 0px
-        right: 0px
-        height: 100%
-        width: 0px
-        z-index: -1
-        content: ''
-        color: #000 !important
-        background: white
-        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s
+    &:hover:before
+      left: 0%
+      right: auto
+      width: 100%
+      position: absolute
+      top: 0px
+      right: 0px
+      height: 100%
+      width: 0px
+      z-index: -1
+      content: ''
+      color: #000 !important
+      background: white
+      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s
