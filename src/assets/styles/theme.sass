@@ -1,0 +1,29 @@
+@import "variables"
+
+@import "components/home"
+@import "components/header"
+@import "components/nav"
+@import "components/button"
+@import "components/content"
+
+html
+  height: 100%
+  font-size: 16px
+  background: url('../img/bg_image.jpg') no-repeat right 31.5% bottom 66% fixed
+  background-size: 180%
+  +basic
+
+  @media (max-width: 1000px) 
+    font-size: calc(12px + .4vw)
+  
+body
+  display: flex
+  flex-direction: column
+  height: 100vh
+  margin: 0
+  background-color: rgba(#000000, 0.33)
+
+a:link, a:visited
+  color: white
+  text-decoration: none
+
