@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Content from '../components/Content';
+import MobileNav from '../components/MobileNav';
+
 class Home extends React.Component {
 
 
@@ -10,6 +12,7 @@ class Home extends React.Component {
 
     return (
       <section className='home'>
+        <MobileNav />
         <Header />
         <Content />
       </section>

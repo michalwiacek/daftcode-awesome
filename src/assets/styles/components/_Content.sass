@@ -20,9 +20,121 @@
     margin: 3.1em auto
     &:hover
       animation: spin 1s
+.social
+  margin: 1em 0
+  &__wrapper
+    display: none
+    margin: 1.9em 1em 0 1em
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    +basic
+    letter-spacing: 1px
+    font-size: .6rem
+    color: white
+    text-transform: uppercase
+    -webkit-padding-start: 0
+  &__text
+    +basic
+    text-align: center
+    color: white
+    font-size: .7rem
+  &__item
+    margin: 0
+    display: flex
+  &__icon
+    display: inline-block
+    width: auto
+    height: 24px
+  &__icon-g
+    display: inline-block
+    width: auto
+    height: 24px
+  &__wrapper
+    @media (max-width: 475px)
+      flex-direction: column
+.spacer
+  display: inline-block
+  margin: 0 8px
+  padding: 0 2px
 
 @keyframes spin
   from
     transform: rotate(0deg)
   to
     transform: rotate(360deg)
+
+.triangle
+  position: fixed
+  text-align: center
+  bottom: -3.5em
+  left: 50%
+  transform: translateX(-50%)
+  width: 4.93em
+  height: 4.93em
+  &__bg
+    position: absolute
+    content: ""
+    background: white
+    width: 4.93em
+    height: 4.93em
+    transform: rotate(-45deg)
+    border-top-right-radius: 5%
+    z-index: -1
+  &__text
+    position: relative
+    margin-top: .26em
+    z-index: 1
+    +basic
+    color: black
+    font-size: .55em
+  &__plus
+    display: none
+    position: relative
+    bottom: .5em
+    z-index: 1
+    +basic
+    color: black
+    font-size: 1em
+
+@media (max-width: 1024px)
+  .content
+    width: 435px
+    &__icon
+      height: 80px
+      width: 80px
+      margin: 3.7em auto
+  
+  .social
+    margin: 1.3em 0
+    letter-spacing: .07px
+    &__wrapper
+      margin: 2.5em 1em
+      letter-spacing: 0
+    &__icon,  &__icon-g
+      height: 19px
+
+  .triangle
+    bottom: -3.25em
+
+@media (max-width: 475px)
+  .content
+    width: 200px
+    height: auto
+    &__text
+      font-size: 1em
+      margin: auto
+    &__icon
+      height: 65px
+      margin: auto
+
+    .triangle
+      width: 4em
+      height: 4em
+      &__bg
+        width: 4em
+        height: 4em
+      &__text
+        display: none
+      &__plus
+        display: inline        
