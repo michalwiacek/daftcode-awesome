@@ -21,25 +21,24 @@ class Nav extends Component {
 
   render() {
     const items = [
-      {buttonText: 'features' },
-      {buttonText: 'case studies' },
-      {buttonText: 'about' },
-      ]
-    //const { items } = this.props;
+      { buttonText: 'features' },
+      { buttonText: 'case studies' },
+      { buttonText: 'about' },
+    ];
     const { selectedItem } = this.state;
     return (
       <ul className='nav__list'>
         {items && items.length > 0 ?
           items.map(item => 
             <li className='nav__item'>
-            <Button
-              key={item.buttonText}
-              buttonText={item.buttonText}
-              onClick={this.onItemClick}
-              setState={{ active: selectedItem === item.buttonText ? 'true' : 'false' }}
-            >
-              {item.buttonText}
-            </Button></li>
+              <Button
+                key={item.buttonText}
+                buttonText={item.buttonText}
+                onClick={this.onItemClick}
+                setState={{ active: selectedItem === item.buttonText ? 'true' : 'false' }}
+              >
+                {item.buttonText}
+              </Button></li>
           ) : 'kwas'}
         
         <li className='nav__item'><Button buttonClass='button__type2' link="#contact" buttonText="contact"/></li>
