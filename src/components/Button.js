@@ -20,10 +20,10 @@ class Button extends React.Component {
   
   render() {
     
-    const { buttonText , link, buttonClass='button' } = this.props;
+    const { buttonText , link='#', buttonClass='button' } = this.props;
     
     return (
-      <a href={link} className={[buttonClass, this.state.isToggleOn ? 'ON' : 'OFF'].join(' ')} onClick={this.handleClick}>
+      <a href={link} className={buttonClass} onClick={this.handleClick}>
         { buttonText }
       </a>
       );
